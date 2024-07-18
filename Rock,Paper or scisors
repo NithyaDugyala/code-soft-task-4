@@ -1,0 +1,74 @@
+#Rock or Paper or scisors
+#Task-4 @codesoft
+rock=('''   
+
+
+,--.--._
+------" _, \___)
+        / _/____)
+        \//(____)
+------\     (__)
+       `-----"   ''')
+
+paper=('''
+        /')    ./')        
+      /' /.--''./'')          
+ :--''  ;    ''./'')            
+ :     '     ''./')              
+ :           ''./'                   
+ :--''-..--                    
+''')
+
+scissors=('''   
+            .-.  _
+               | | / )
+                 | |/ /
+              _|__ /_
+             / __)-' )
+             \  `(.-')
+              > ._>-'
+             / \/
+''')
+
+import random
+print("What do you want to choose type(0) for rock ,(1)paper and (2)scissors")
+your_choice=int(input())
+print(f"you choose:{your_choice}" )
+if your_choice>2:
+        print("Invalid number")
+else:
+        if your_choice==0:
+                print(rock)
+        elif your_choice==1:
+                print(paper)
+        elif your_choice==2:
+                print(scissors)
+        else:
+                print("youre wronge!Type again")
+if your_choice>2:
+        print("Try another number")
+else:
+        computer_choose=random.randint(0,2)
+        print(f"Computer chose:{computer_choose}")
+        if computer_choose==0:
+                print(rock)
+        elif computer_choose==1:
+                print(paper)
+        else: 
+                print(scissors)
+        if computer_choose==0 and your_choice==2:
+                print("You lost!Better luck next time")
+        elif your_choice>computer_choose:
+                print("You win!Congratulations")
+        elif your_choice==0 and computer_choose==2:
+                print("You win!Congratulations")
+        elif computer_choose>your_choice:
+                print("You lost!Better luck next Time")
+        elif your_choice==computer_choose:
+                print("It's a draw")
+        else:
+                print("You typed an invalid number.Try again.")
+
+
+
+
